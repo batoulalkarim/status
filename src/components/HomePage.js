@@ -2,7 +2,9 @@ import React from 'react'
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div className="homepage">
+      <h1>Status</h1>
+    </div>
   )
 }
 
