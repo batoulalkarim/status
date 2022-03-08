@@ -35,7 +35,7 @@ function App() {
         <HomePage profiles={profileData}/>
       </Route>
       <Route exact path='/rankings'>
-        <RankingsPage />
+        <RankingsPage profiles={profileData}/>
       </Route>
       <Route path='/profiles/:id'>
         <Profile />
