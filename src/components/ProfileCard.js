@@ -15,7 +15,7 @@ function ProfileCard({ profile, onDeletePost }){
         <div className="column">
         <div className="cards">
                 <div className="image">
-                    <img alt="oh no!" src={profile.profile_pic} className="profilePicture" />
+                    <img alt="oh no!" src={profile.image} className="profilePicture" />
                 </div>
                 <div className="content">
                     <div className="header">

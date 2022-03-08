@@ -19,7 +19,7 @@ function Profile() {
 
     <h5 className="username">@{profile.username}</h5>
     <h4>{profile.name}</h4>
-    <img src={profile.profile_pic} alt="profile" className="ppc"></img>
+    <img src={profile.image} alt="profile" className="ppc"></img>
     <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
       
     </div>
