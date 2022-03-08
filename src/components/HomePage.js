@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ProfileCard from './ProfileCard';
-import star from '../profileimages/star.png';
+import star from '../images/star.png';
 
 
 function HomePage({profiles, onDeletePost }) {
