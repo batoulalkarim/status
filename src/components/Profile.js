@@ -16,9 +16,10 @@ function Profile() {
     <div>
       <h1 className="status">Profile Page</h1>
     <div className="profileCard">
-     <img src={profile.profile_pic} alt="profile"></img>
-     <h4>{profile.name}</h4>
-     <h5>{profile.caption}</h5>
+    <h5 className="username">@{profile.username}</h5>
+    <h4>{profile.name}</h4>
+    <img src={profile.profile_pic} alt="profile" className="ppc"></img>
+    <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
       
     </div>
     <br />
