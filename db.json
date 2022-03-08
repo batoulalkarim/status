@@ -2,34 +2,31 @@
   "profiles": [
     {
       "id": 1,
-      "username": "batoulalkarim",
+      "username": "theREALswaglord69",
       "name": "Batoul Alkarim",
       "bio": "here for a good time, not a long time",
       "rating": 5,
       "profile_pic": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/batoul-profile-pic.png",
-      "post": "",
       "caption": "What am I even supposed to write here? #SelfieSunday",
       "comments": []
     },
     {
       "id": 2,
       "username": "stormibaby",
-      "name": "Stormy",
+      "name": "Stormi",
       "bio": "My mom made me this account..",
       "rating": 5,
       "profile_pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaZgsxGZAf2KmPqIhYbvRc_bNDzwmo6XUrEwb_1FwHmN0eB7rLMwk9NG9dwJv2tlKUcSc&usqp=CAU",
-      "post": "",
       "caption": "Just another day bathing in billions",
       "comments": []
     },
     {
       "id": 3,
-      "username": "zeliec",
-      "name": "Zelie",
-      "bio": "",
+      "username": "zelchow",
+      "name": "Zelie Chowaiki",
+      "bio": "world's greatest poster",
       "rating": 5,
       "profile_pic": "",
-      "post": "",
       "caption": "",
       "comments": []
     },
@@ -40,90 +37,18 @@
       "bio": "All praise to the most high up",
       "rating": 5,
       "profile_pic": "",
-      "post": "",
       "caption": "Selena, I miss you..",
       "comments": []
     },
     {
       "id": 5,
-      "username": "willb",
+      "username": "swaglord69",
       "name": "Will Burke",
-      "bio": "",
+      "bio": "we live in a society",
       "rating": 5,
-      "profile_pic": "https://lh3.googleusercontent.com/fife/AAWUweWOtfLZZmdQdlltTsQVo7YTN2RYdOWYMB9arvCUaAqL78IgvPlDrNwkONNpAW6-a0auIK3Vyez_J9EwL2jKkxJqybu4nxY09fpNiff3xzVKr-R0BOGcI7uaDP9nDuSOyBtzsWpiEPUBuchpiYVCyUmLDL3AqIgZBJKQaACd1bnuSaKFKpDf2N0OV2hHi1Kzqp-dRvDQSpH0WHYY38fUYhPuGpjyVaBcAKtVKLE5fMwdvXGZcbW8psjQeBlG3XGjGaLxkeqN44BeyHw2jCNlsjhw30z0BRDmkkY-tx-Oj4AzEAKx66_682zWX4vABDDr32VqLa6omymXP404uGqx1_vGLky6VGhuyn2YhxG9WPi-nUoPDgvtfPLcEjl3LxEU5quKwGegcGYeXWIWcxeSkSfOOnk0WlGGU9HjVIYK5FNOEy_1BecgnFAy3r68dQnmJPeYRNN8GpIQoUXkcZtylA8I9t1PZC5L0fGaKWVwFRaeGZSHmjyCRAY_mMGs079QMFDN-UOb1ONEGP8N7Q7-e1jzu6e7SJYPVRiBFMM-Fy6oRVybbcfRDOSMhrmn7_Ij4G_fHxMpjKhAVIn7xc0nO0kX3_eW-DsCJvPooBGjj7GndA-BRJK9OGHGmv-KeiMJ-wntu7ohd8l8wm8B2KowSnPsaMUVy8FauPTuh9nLHkejshdyXFD9hN6u7aqE2O6F7XPQWjSo-HapfcCoM97Gn7o=s1440-no?authuser=0",
-      "post": "",
-      "caption": "",
+      "profile_pic": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/will-profile-pic.png",
+      "caption": "someone get me a daiper cause I can't stop shitting on these fools",
       "comments": []
-    },
-    {
-      "id": 6,
-      "username": "",
-      "name": "",
-      "bio": "",
-      "rating": 5,
-      "profile_pic": "",
-      "post": "",
-      "caption": "",
-      "comments": []
-    },
-    {
-      "id": 7,
-      "username": "",
-      "name": "",
-      "bio": "",
-      "rating": 5,
-      "profile_pic": "",
-      "post": "",
-      "caption": "",
-      "comments": []
-    },
-    {
-      "id": 8,
-      "username": "",
-      "name": "",
-      "bio": "",
-      "rating": 5,
-      "profile_pic": "",
-      "post": "",
-      "caption": "",
-      "comments": []
-    },
-    {
-      "id": 9,
-      "username": "",
-      "name": "",
-      "bio": "",
-      "rating": 5,
-      "profile_pic": "",
-      "post": "",
-      "caption": "",
-      "comments": []
-    },
-    {
-      "id": 10,
-      "username": "",
-      "name": "",
-      "bio": "",
-      "rating": 5,
-      "profile_pic": "",
-      "post": "",
-      "caption": "",
-      "comments": []
-    },
-    {
-      "caption": "",
-      "image": "",
-      "id": 11
-    },
-    {
-      "caption": "newPost test",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQSEhUUExIVFRIXGRoZFxgXGR4YFhoYFx8XGhoYGSIaHiggIh4mGxgYIjEiJikrLjEvGR8zODMsNygtLisBCgoKDg0OGxAQGy0mICYvLTUtLy8rLy0tLTItLy0vLy4rNS0tLS0tLS8vLS0tLy0tLS0tLS0tLy0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAAABQYHBAMCCAH/xAA+EAACAQIEBAQDBgQFAwUAAAABAhEAAwQSITEFBkFREyJhcQcygRQjQlKRoYKxwdEzYnKS8BXC4RY0orLx/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EADgRAAEDAgMFBgUDAwUBAAAAAAEAAhEDIQQxQRJRYXHwBRMigZHBFEKhsdEjMuFSYvEVM3KS0gb/2gAMAwEAAhEDEQA/ANxpSlESlKURKUpREpSlESlZ9zd8RksE28MFu3RoznW2p9I+Y+xgdzqKieS/iHdN4WsY4dbjQtyApRjspygAqT13HqNiLV6UpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUrzu3QoJOwrxzg0Scgi+yaoPxFxuIe29qw2VQPOoBD3B1UHtHQDXadYq2WsWXBaDoYAG//PWs/wCO3HsYm3h7QLlpJzMWIzHNEnUgZiJOsAVhYjtN7g04eI3nUX35AxzVujQaXEPWZhwRpX1w3DHE30w6EBnIBJ+VAd2b+25OlWni3Kgd/GDrbVycyA6Mw08RTGinXpqR6zXHxMLYt22RPIhK+URmn8Zbc6gb9xFaDcaKrB3Q8RsAdDxNhG697ZaR9xBO0bDX8LecNayIq5i2VQMx1JgRJ9TXvVF5C5ha8qAsWDgkhjLIwmSpPzJptuJGkGavVXAXZPbB3Z+hyI4qExoZSlKV0vEpSlESuXFY1",
-      "id": 12
-    },
-    {
-      "caption": "newPost test",
-      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQSEhUUExIVFRIXGRoZFxgXGR4YFhoYFx8XGhoYGSIaHiggIh4mGxgYIjEiJikrLjEvGR8zODMsNygtLisBCgoKDg0OGxAQGy0mICYvLTUtLy8rLy0tLTItLy0vLy4rNS0tLS0tLS8vLS0tLy0tLS0tLS0tLy0tLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAAABQYHBAMCCAH/xAA+EAACAQIEBAQDBgQFAwUAAAABAhEAAwQSITEFBkFREyJhcQcygRQjQlKRoYKxwdEzYnKS8BXC4RY0orLx/8QAGgEBAAMBAQEAAAAAAAAAAAAAAAMEBQIBBv/EADgRAAEDAgMFBgUDAwUBAAAAAAEAAhEDIQQxQRJRYXHwBRMigZHBFEKhsdEjMuFSYvEVM3KS0gb/2gAMAwEAAhEDEQA/ANxpSlESlKURKUpREpSlESlZ9zd8RksE28MFu3RoznW2p9I+Y+xgdzqKieS/iHdN4WsY4dbjQtyApRjspygAqT13HqNiLV6UpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUpREpSlESlKURKUrzu3QoJOwrxzg0Scgi+yaoPxFxuIe29qw2VQPOoBD3B1UHtHQDXadYq2WsWXBaDoYAG//PWs/wCO3HsYm3h7QLlpJzMWIzHNEnUgZiJOsAVhYjtN7g04eI3nUX35AxzVujQaXEPWZhwRpX1w3DHE30w6EBnIBJ+VAd2b+25OlWni3Kgd/GDrbVycyA6Mw08RTGinXpqR6zXHxMLYt22RPIhK+URmn8Zbc6gb9xFaDcaKrB3Q8RsAdDxNhG697ZaR9xBO0bDX8LecNayIq5i2VQMx1JgRJ9TXvVF5C5ha8qAsWDgkhjLIwmSpPzJptuJGkGavVXAXZPbB3Z+hyI4qExoZSlKV0vEpSlESuXFY1",
-      "id": 13
     }
   ]
 }
