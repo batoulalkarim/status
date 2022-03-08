@@ -1,15 +1,15 @@
 import React from 'react'
 
 
-function Profile({profile}) {
+function Profile({caption, name,}) {
 
   return (
     <div>
       <h1 className="status">Profile Page</h1>
     <div className="profileCard">
      <h1>image here</h1>
-     <h4>name here</h4>
-     <h5>caption here</h5>
+     <h4>{name}</h4>
+     <h5>{caption}</h5>
       
     </div>
     <br />

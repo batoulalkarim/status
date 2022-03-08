@@ -1,8 +1,15 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-function ProfileCard({ profile }){
+function ProfileCard({ profile, onDeletePost }){
     const history = useHistory();
+    function handleDeletePost(){
+        fetch(`http://localhost:8002/profiles/${profile.id}`, {
+            method: "DELETE",
+        });
+        onDeletePost(profile.id);
+    }
+
     return(
         <div className="column">
         <div className="cards" onClick={() => history.push('/Profile.js')}>
@@ -17,6 +24,7 @@ function ProfileCard({ profile }){
                     </div>
 
                 </div>
+                <button onSubmit={handleDeletePost}>Delete</button>
             </div>
         </div>
     )

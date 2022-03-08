@@ -4,7 +4,7 @@ import ProfileCard from './ProfileCard';
 import star from '../profileimages/star.png';
 
 
-function HomePage({profiles}) {
+function HomePage({profiles, onDeletePost }) {
   return (
     <div className='homepage'>
       <h1 className="status">~Status~</h1>
@@ -18,7 +18,7 @@ function HomePage({profiles}) {
       {
         profiles.map(profile => {
           return (
-            <ProfileCard key={profile.id} profile={profile} />
+            <ProfileCard key={profile.id} profile={profile} onDeletePost={onDeletePost}/>
           )
         })
       }
