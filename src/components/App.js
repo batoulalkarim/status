@@ -3,13 +3,14 @@ import NavBar from './NavBar';
 import HomePage from './HomePage';
 import RankingsPage from './RankingsPage';
 import Profile from './Profile';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { React, useState, useEffect} from 'react';
 import NewPost from './NewPost';
 
 function App() {
 
   const [profileData, setProfileData] = useState([]);
+  
   useEffect(() => {
     fetch('http://localhost:8002/profiles')
     .then(response => response.json())
@@ -28,7 +29,7 @@ function App() {
 
 
   return (
-    <div className='App'>
+    <Router>
       <Switch>
       <Route exact path='/'>
         <HomePage profiles={profileData}/>
@@ -36,7 +37,7 @@ function App() {
       <Route exact path='/rankings'>
         <RankingsPage />
       </Route>
-      <Route path='/Profile.js'>
+      <Route path='/profiles/:id'>
         <Profile />
       </Route>
       <Route exact path='/new-post'>
@@ -46,7 +47,7 @@ function App() {
       </Route>
     </Switch>
       <NavBar />
-    </div>
+      </Router>
   );
 }
 export default App;

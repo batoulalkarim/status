@@ -1,15 +1,24 @@
-import React from 'react'
+import {React, useState, useEffect} from 'react';
+import {useParams} from "react-router-dom";
 
+function Profile() {
+    const [profile, setProfile] = useState(null);
+    const {id} = useParams()
 
-function Profile({caption, name,}) {
+    useEffect(() => {
+      fetch(`http://localhost:8002/profiles/${id}`)
+      .then(r => r.json())
+      .then(data => setProfile(data))
+    }, [id])
+    if(!profile) return <h2>Loading...</h2>
 
   return (
     <div>
       <h1 className="status">Profile Page</h1>
     <div className="profileCard">
-     <h1>image here</h1>
-     <h4>{name}</h4>
-     <h5>{caption}</h5>
+     <img src={profile.profile_pic} alt="profile"></img>
+     <h4>{profile.name}</h4>
+     <h5>{profile.caption}</h5>
       
     </div>
     <br />

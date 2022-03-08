@@ -1,9 +1,9 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function ProfileCard({ profile, onDeletePost }){
-    const history = useHistory();
     function handleDeletePost(){
+
         fetch(`http://localhost:8002/profiles/${profile.id}`, {
             method: "DELETE",
         });
@@ -11,8 +11,9 @@ function ProfileCard({ profile, onDeletePost }){
     }
 
     return(
+        <Link to= {`profiles/${profile.id}`}>
         <div className="column">
-        <div className="cards" onClick={() => history.push('/Profile.js')}>
+        <div className="cards">
                 <div className="image">
                     <img alt="oh no!" src={profile.profile_pic} className="profilePicture" />
                 </div>
@@ -27,6 +28,7 @@ function ProfileCard({ profile, onDeletePost }){
                 <button onSubmit={handleDeletePost}>Delete</button>
             </div>
         </div>
+        </Link>
     )
 }
 
