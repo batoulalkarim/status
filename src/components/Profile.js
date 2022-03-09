@@ -4,7 +4,7 @@ import Stars from "./rating/Stars";
 import RatingForm from "./rating/RatingForm";
 import {AiOutlineSmile} from "react-icons/ai"
 
-function Profile() {
+function Profile({onUpdateComments}) {
     const [profile, setProfile] = useState(null);
     const [isHidden, setIsHidden] = useState(true)
     const {id} = useParams()
@@ -37,22 +37,37 @@ function Profile() {
   if(!profile) return null;
 
 
+    function handleCommentChange(event){
+      setComment(event.target.value);
+    }
+
     function handleSubmit(event){
       event.preventDefault();
       const commentData = {comment: comment};
       const commentArray = [...submittedData, commentData];
       setSubmittedData(commentArray);
       setComment("");
+      fetch(`http://localhost:8001/profiles/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({comments: comment})
+      })
+      .then(res => res.json())
+      .then((updatedComment) => {
+        onUpdateComments(updatedComment)
+      });
     }
 
     const listOfComments = submittedData.map((profile, index) => {
       return(
-        <div key={index}>
+        <li key={index}>
           {profile.comment}
-        </div>
+        </li>
       )
     })
-
+    
 
 
 
@@ -72,23 +87,23 @@ function Profile() {
     <br />
     <br />
     <div className="commentsContainer">
-    <div className="commentsFormContainer">
-      <div className="commentsGoHere">
-        <h4><u>{profile.username}</u> : {profile.caption}</h4>
-      </div>
-      <ul>
-        {listOfComments}
-        </ul>
-      <div className="formOnBottom">
-      <form className="commentsForm" onSubmit={handleSubmit}>
-        <label className="formLabel"><AiOutlineSmile size="25px" /></label>
-        <input type="text" placeholder="Add a Comment..."className="commentInput" />
-        <input type= "submit" value="Post" />
-      </form>
-      </div>
+        <div className="commentsFormContainer">
+          <div className="commentsGoHere">
+          <h4><u>{profile.username}</u> : {profile.caption}</h4>
+          </div>
+         <ul>
+          {listOfComments}
+         </ul>
+         <div className="formOnBottom">
+           <form className="commentsForm" onSubmit={handleSubmit}>
+             <label className="formLabel"><AiOutlineSmile size="25px" /></label>
+             <input type="text" placeholder="Add a Comment..."className="commentInput" value={comment} onChange={handleCommentChange}/>
+             <input type= "submit" value="Post" />
+           </form>
+         </div>
+       </div>
     </div>
-    </div>
-    </div>
+  </div>
   )
 }
 
