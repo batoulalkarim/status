@@ -12,20 +12,24 @@ function RankingsPage({profiles}) {
 
   return (
     <div>
-      <div id="sort-bar">
-        <label>Sort popularity: </label>
+      <div>
+      <img className="trophy" src="https://www.freeiconspng.com/uploads/elegant-trophy-hd-png-6.png"  alt="elegant trophy hd png" />
+      </div>
+      <div className="moveSortbar" >
+      <div id="sort-bar" className="">
+        <label><strong>Sort popularity: </strong></label>
         <select name="profile-sorter" id="profile-sorter" 
         onChange={(e) => onSortChange(e.target.value)} value={sortBy} >
           <option value="popular">High to low</option>
           <option value="unpopular">Low to high</option>
         </select>
       </div>
-
+      </div>
       <ol>
         {
           rankedProfiles.map(profile => {
             return (
-              <li key={profile.id}> {profile.name} {profile.rating} stars</li>
+              <li className="lirating" key={profile.id}>{profile.name} | {profile.rating} stars</li>
             )
           })
         }

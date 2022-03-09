@@ -21,17 +21,35 @@ function App() {
     reloadProfiles();
   },[])
 
-  // function handleDeletePost(id) {
-  //   const updatedProfilesArray = profileData.filter((profile) => profile.id !== id);
-  //   setProfileData(updatedProfilesArray)
-  // }
+  function handleDeletePost(event, profile) {
+    event.stopPropagation();
+    const foundIndex = profileData.findIndex(item => profile.id === item.id);
+    if (foundIndex === -1) {
+      console.log("secret message")
+    } else {
+      const copyArray = [...profileData];
+      copyArray.splice(foundIndex, 1);
+
+      setProfileData(copyArray)
+    }
+         fetch(`http://localhost:8002/profiles/${profile.id}`, {
+              method: "DELETE",
+              headers: {
+                "Content-Type": "application/json"
+              }
+          })
+          // onDeletePost(profile.id);
+          console.log("deleting id")
+        }
+    // const updatedProfilesArray = profileData.filter((profile) => profile.id !== id);
+    // setProfileData(updatedProfilesArray)
 
 
   return (
     <Router>
       <Switch>
       <Route exact path='/'>
-        <HomePage profiles={profileData}/>
+        <HomePage onDeletePost={handleDeletePost} profiles={profileData}/>
       </Route>
       <Route exact path='/rankings'>
         <RankingsPage profiles={profileData}/>

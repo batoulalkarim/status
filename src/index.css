@@ -15,8 +15,15 @@ body {
 
 .status{
   font-family: cursive;
-  text-align: center;
+  text-align: left;
   font-size: 50px;
+  margin-left: 200px;
+}
+
+.homeContainer {
+  margin-left: 300px;
+  margin-right: 200px;;
+  float: left;
 }
 .navbar {
   background-color: #333;
@@ -50,6 +57,30 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.lirating{
+  border: solid;
+  font-size: 25px;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.sort-bar{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trophy {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  display: block;
 }
 
 .profileCard {
@@ -89,7 +120,7 @@ body {
 
 
 .image {
-  height: 350px;
+  height: 80%;
   background-size: cover;
 }
 .cards {
@@ -101,8 +132,8 @@ body {
   margin: 30px;
   float: left;
   text-align: center;
-  width: 350px;
-  height: 455px;
+  width: 550px;
+  height: 655px;
 }
 
 .cards:hover {
@@ -114,7 +145,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   float: center;
-  text-align: center;
+  text-align: left;
 }
 
 a {
@@ -140,4 +171,14 @@ a {
   object-position: 0% 0;
   object-fit: cover;
   vertical-align: bottom;
+}
+
+.moveStars {
+  margin-left: 200px;
+  margin-top: -40px;
+}
+
+.moveSortbar {
+  text-align: center;
+  margin-top: 20px;
 }
