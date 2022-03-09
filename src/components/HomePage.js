@@ -4,7 +4,7 @@ import ProfileCard from './ProfileCard';
 import star from '../images/star.png';
 
 
-function HomePage({profiles, onDeletePost }) {
+function HomePage({profiles, onDeletePost, onUpdateComments }) {
   return (
     <div className='wrap'>
       
@@ -41,7 +41,7 @@ function HomePage({profiles, onDeletePost }) {
         profiles.map(profile => {
           if (profile.image) {
             return (
-            <ProfileCard key={profile.id} profile={profile} onDeletePost={onDeletePost}/>
+            <ProfileCard key={profile.id} profile={profile} onDeletePost={onDeletePost} onUpdateComments={onUpdateComments}/>
           )}
           else return null;
           }

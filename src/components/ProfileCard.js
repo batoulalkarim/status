@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Stars from "./rating/Stars";
 
-function ProfileCard({ profile, onDeletePost }){
+function ProfileCard({ profile, onDeletePost}){
 
 //     function handleDeletePost(){
 
