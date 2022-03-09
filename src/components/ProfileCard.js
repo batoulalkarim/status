@@ -13,7 +13,6 @@ function ProfileCard({ profile, onDeletePost }){
 //     }
 
     return(
-        <Link to= {`profiles/${profile.id}`}>
        <div className="homeContainer">    
         <div className="column">
             <Link to= {`profiles/${profile.id}`}>
@@ -26,16 +25,13 @@ function ProfileCard({ profile, onDeletePost }){
                       <h5>{profile.name} </h5>
                       <h5>{profile.caption}</h5>
                       <Stars size={30} rating={profile.rating} />
-
                     </div>
-
                 </div>
                 <button onSubmit={(event) => onDeletePost(event, profile)}>Delete</button>
             </div>
             </Link>
         </div>
         </div>
-        </Link>
     )
 }
 

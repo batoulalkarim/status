@@ -48,7 +48,7 @@ function App() {
   return (
     <Router>
       <Switch>
-      <Route exact path='/'>
+      <Route exact path='/' onChange={reloadProfiles}>
         <HomePage onDeletePost={handleDeletePost} profiles={profileData}/>
       </Route>
       <Route exact path='/rankings'>
@@ -64,8 +64,8 @@ function App() {
         yourAccount={profileData[0]}/>
       </Route>
     </Switch>
-      <NavBar />
-      </Router>
+    <NavBar />
+    </Router>
   );
 }
 export default App;

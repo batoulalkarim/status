@@ -1,39 +1,58 @@
 import {React, useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import Stars from "./rating/Stars";
+import RatingForm from "./rating/RatingForm";
 
 function Profile() {
     const [profile, setProfile] = useState(null);
+    const [isHidden, setIsHidden] = useState(true)
     const {id} = useParams()
+
+    function reloadProfile() {
+      fetch(`http://localhost:8002/profiles/${id}`)
+      .then(r => r.json())
+      .then(data => setProfile(data))
+    }
 
     useEffect(() => {
       fetch(`http://localhost:8002/profiles/${id}`)
       .then(r => r.json())
       .then(data => setProfile(data))
     }, [id])
-    if(!profile) return null;
+
+    function changeHidden() {
+      setIsHidden(!isHidden);
+    }
+
+    function handleKeyDown(e) {
+      e.preventDefault();
+      if (e.key === 'Escape' && !isHidden) {
+        setIsHidden(true);
+      }
+    }
+
+  if(!profile) return null;
 
   return (
-    <div>
+    <div tabIndex={0} onKeyDown={(e) => handleKeyDown(e)} className="profile-div">
       <h1 className="status">Profile Page</h1>
-    <div className="profileCard">
-
-    <h5 className="username">@{profile.username}</h5>
-    <h4>{profile.name}</h4>
-    <img src={profile.image} alt="profile" className="ppc"></img>
-    <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
-    <Stars size={30} rating={profile.rating} />
-      
-    </div>
-    <br />
-    <br />
-    <div className="commentsFormContainer">
-      <form className="commentsForm">
-        <label className="formLabel">Comment</label>
-        <input type="text" placeholder="Leave a Comment..."className="commentInput" />
-        <input type= "submit" value="Submit" />
-      </form>
-    </div>
+      <div className="profileCard" >
+        <h5 className="username">@{profile.username}</h5>
+        <h4>{profile.name}</h4>
+        <img src={profile.image} alt="profile" className="ppc"></img>
+        <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
+        <RatingForm isHidden={isHidden} changeHidden={changeHidden} profile={profile} reloadProfile={reloadProfile}/>
+        <Stars size={30} rating={profile.rating} />
+        <button onClick={changeHidden}>Rate</button>
+        <div className="commentsFormContainer">
+          <form className="commentsForm">
+            <label className="formLabel">Comment</label>
+            <input type="text" placeholder="Leave a Comment..."className="commentInput" />
+            <input type= "submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+     
     </div>
   )
 }

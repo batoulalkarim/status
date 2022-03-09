@@ -93,7 +93,8 @@ body {
   float: center;
   text-align: center;
   width: 550px;
-  height: 455px;
+  height: 600px;
+  margin-bottom: 80px;
 }
 .picCaption {
   text-align: left;
@@ -181,4 +182,38 @@ a {
 .moveSortbar {
   text-align: center;
   margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.rating-form {
+  background-color: rgb(247, 217, 222);
+    height: 75px;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:25%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #000000;
+    padding: 10px;
+    box-shadow: 0px 5px 30px black;
+    border-radius: 40px;
+}
+
+.rating-form * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-div {
+  outline: none;
+}
+
+.profile-div * {
+  outline: none;
 }
