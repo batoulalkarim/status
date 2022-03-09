@@ -11,7 +11,8 @@ function HomePage({profiles, onDeletePost }) {
       {/* this div below is also going to hold the search bar */}
       <div className="homeTopBar">
       <h1 className="status">~Status~</h1>
-     
+      <input type="text" placeholder="Search" className="search"/>
+      
         <div className="moveStars">
           <div className='stars'>
           
@@ -22,6 +23,8 @@ function HomePage({profiles, onDeletePost }) {
             <img src={star} alt="oh no" className='stars'/>
           </div>
           </div>
+          </div>
+          <div className="suggestedWrap">
           <div className="tophalfsuggested">
             <div className="suggestedFollow">
               <img className="smallPic" src="https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/batoul-profile-pic.png" alt="oh no" />
@@ -33,7 +36,7 @@ function HomePage({profiles, onDeletePost }) {
 
             </div>
           </div>
-      </div>
+          </div>
       {
         profiles.map(profile => {
           if (profile.image) {
