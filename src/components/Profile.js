@@ -1,5 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
+import Stars from "./rating/Stars";
 
 function Profile() {
     const [profile, setProfile] = useState(null);
@@ -10,7 +11,7 @@ function Profile() {
       .then(r => r.json())
       .then(data => setProfile(data))
     }, [id])
-    if(!profile) return <h2>Loading...</h2>
+    if(!profile) return null;
 
   return (
     <div>
@@ -21,6 +22,7 @@ function Profile() {
     <h4>{profile.name}</h4>
     <img src={profile.image} alt="profile" className="ppc"></img>
     <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
+    <Stars size={30} rating={profile.rating} />
       
     </div>
     <br />

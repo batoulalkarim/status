@@ -4,7 +4,7 @@
       "id": 1,
       "username": "user",
       "name": "Me",
-      "bio": "",
+      "bio": "Create a bio",
       "rating": 3,
       "image": "",
       "caption": "",
@@ -26,8 +26,8 @@
       "name": "Zelie Chowaiki",
       "bio": "world's greatest poster",
       "rating": 5,
-      "image": "",
-      "caption": "",
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/zelie-profile-pic.png",
+      "caption": "I will change this don't worry lol",
       "comments": []
     },
     {

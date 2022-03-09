@@ -25,7 +25,7 @@ function RankingsPage({profiles}) {
         {
           rankedProfiles.map(profile => {
             return (
-              <li>{profile.name} {profile.rating} stars</li>
+              <li key={profile.id}> {profile.name} {profile.rating} stars</li>
             )
           })
         }

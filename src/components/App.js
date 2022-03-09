@@ -10,22 +10,21 @@ import NewPost from './NewPost';
 function App() {
 
   const [profileData, setProfileData] = useState([]);
-  
-  useEffect(() => {
+
+  function reloadProfiles() {
     fetch('http://localhost:8002/profiles')
     .then(response => response.json())
     .then(data => setProfileData(data));
+  }
+  
+  useEffect(() => {
+    reloadProfiles();
   },[])
 
-  function handleAddToFeed(newPost){
-    const updatedProfilesArray = [...profileData, newPost];
-    setProfileData(updatedProfilesArray)
-  }
-
-  function handleDeletePost(id) {
-    const updatedProfilesArray = profileData.filter((profile) => profile.id !== id);
-    setProfileData(updatedProfilesArray)
-  }
+  // function handleDeletePost(id) {
+  //   const updatedProfilesArray = profileData.filter((profile) => profile.id !== id);
+  //   setProfileData(updatedProfilesArray)
+  // }
 
 
   return (
@@ -37,13 +36,14 @@ function App() {
       <Route exact path='/rankings'>
         <RankingsPage profiles={profileData}/>
       </Route>
-      <Route path='/profiles/:id'>
+      <Route exact path='/profiles/:id'>
         <Profile />
       </Route>
       <Route exact path='/new-post'>
         <NewPost
-        onDeletePost={handleDeletePost}  
-        onAddPost={handleAddToFeed} />
+        // onDeletePost={handleDeletePost}  
+        onAddPost={reloadProfiles} 
+        yourAccount={profileData[0]}/>
       </Route>
     </Switch>
       <NavBar />

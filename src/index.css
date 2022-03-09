@@ -135,3 +135,9 @@ a {
   text-align: left;
   margin-top: -15px;
 }
+
+.rating-stars img {
+  object-position: 0% 0;
+  object-fit: cover;
+  vertical-align: bottom;
+}

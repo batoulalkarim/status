@@ -17,7 +17,7 @@ function HomePage({profiles, onDeletePost }) {
       </div>
       {
         profiles.map(profile => {
-          if (profile.image !== "") {
+          if (profile.image) {
             return (
             <ProfileCard key={profile.id} profile={profile} onDeletePost={onDeletePost}/>
           )}
