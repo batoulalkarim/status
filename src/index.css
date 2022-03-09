@@ -175,6 +175,12 @@ a {
   margin-top: -15px;
 }
 
+.rating-stars img {
+  object-position: 0% 0;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
 .moveStars {
   margin-left: 200px;
   margin-top: -40px;

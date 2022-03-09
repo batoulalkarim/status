@@ -36,10 +36,13 @@ function HomePage({profiles, onDeletePost }) {
       </div>
       {
         profiles.map(profile => {
-          return (
+          if (profile.image) {
+            return (
             <ProfileCard key={profile.id} profile={profile} onDeletePost={onDeletePost}/>
-          )
-        })
+          )}
+          else return null;
+          }
+        )
       }
     </div>
   )

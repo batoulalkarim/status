@@ -1,37 +1,65 @@
-import React, { useState } from 'react';
+import {React, useEffect, useState } from 'react';
+import { useHistory } from "react-router-dom";
 
-function NewPost({ onAddPost }){
-    const [caption, setCaption] = useState("")
-    const [image, setImage] =useState("")
+function NewPost({ onAddPost, yourAccount }){
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        fetch('http://localhost:8002/profiles/', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                caption: caption,
-                image: image,
-            }),
-        })
-        .then(res => res.json())
-        .then((newPost) => onAddPost(newPost));
+  let history = useHistory();
+  const [updatedAccount, setUpdatedAccount] = useState({});
+
+  useEffect(() => {
+    setUpdatedAccount({...yourAccount, image: '', caption: ''});
+  },[yourAccount]);
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (updatedAccount.image === '' || updatedAccount.caption === '') {
+      alert('Post must include image and caption');
     }
+    else {
+      console.log(updatedAccount);
+      fetch('http://localhost:8002/profiles/1',{
+        method: 'PATCH',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedAccount)
+        })
+        .then(response => response.json())
+        .then(newPost => {
+          onAddPost(newPost);
+          e.target.reset();
+          history.push('/');
+        });
+    }
+  }
 
+  function handleChange(e) {
+    if (e.target.name === 'image') {
+      // const url = URL.createObjectURL(e.target.files[0]);
+      // setUpdatedAccount({...updatedAccount, image: url});
+      setUpdatedAccount({...updatedAccount, image: e.target.value});
+    }
+    else {
+      setUpdatedAccount({...updatedAccount, caption: e.target.value});
+    }
+  }
 
-    return(
-        <div className="newpostContainer">
-            <h2>New Post</h2>
-            <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Write a Caption..." value={caption} onChange={(e) => setCaption(e.target.value)} />
-                <input type="text" name="image" placeholder="Image URL" value={image} onChange={(e) => setImage(e.target.value)} />
-                <button type="submit">Post Pic</button>
-            </form>
+  if(!updatedAccount) return null;
 
-        </div>
-    )
+  return(
+    <div className="newpostContainer">
+      <h2>New Post</h2>
+      <form onSubmit={handleSubmit}>
+        <input name="caption" type="text" placeholder="Write a Caption..." 
+          onChange={handleChange} />
+        {/* <input name="image" type="file" accept="image/png, image/jpeg, image/jpg" 
+          onChange={handleChange}  /> */}
+        <input name="image" type="text" placeholder="add image url"
+          onChange={handleChange}  />
+        <button type="submit">Post Pic</button>
+      </form>
+    </div>
+  )
 }
 
 export default NewPost;
