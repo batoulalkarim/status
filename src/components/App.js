@@ -6,6 +6,9 @@ import Profile from './Profile';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { React, useState, useEffect} from 'react';
 import NewPost from './NewPost';
+import UserRating from './UserRating';
+
+
 
 function App() {
 
@@ -57,6 +60,7 @@ function App() {
 
   return (
     <Router>
+       <UserRating />
       <Switch>
       <Route exact path='/'>
         <HomePage onDeletePost={handleDeletePost} profiles={profileData} onUpdateComments={handleUpdateComments}/>

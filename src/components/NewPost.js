@@ -48,16 +48,21 @@ function NewPost({ onAddPost, yourAccount }){
 
   return(
     <div className="newpostContainer">
-      <h2>New Post</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="caption" type="text" placeholder="Write a Caption..." 
+      <div className="headingNP">
+        <h2>New Post</h2>
+      </div>
+      <div className="npForm">
+        <form onSubmit={handleSubmit}>
+          <h1>Are You Ready To Post?</h1>
+         <input className="cap1" name="caption" type="text" placeholder="Write a Caption..." 
           onChange={handleChange} />
         {/* <input name="image" type="file" accept="image/png, image/jpeg, image/jpg" 
           onChange={handleChange}  /> */}
-        <input name="image" type="text" placeholder="add image url"
+         <input name="image" type="text" placeholder="add image url"
           onChange={handleChange}  />
-        <button type="submit">Post Pic</button>
-      </form>
+          <button type="submit">Post Pic</button>
+        </form>
+      </div>
     </div>
   )
 }

@@ -12,6 +12,7 @@ function RankingsPage({profiles}) {
 
   return (
     <div>
+      <h1 className="rankTitle">Rankings</h1>
       <div>
       <img className="trophy" src="https://www.freeiconspng.com/uploads/elegant-trophy-hd-png-6.png"  alt="elegant trophy hd png" />
       </div>
