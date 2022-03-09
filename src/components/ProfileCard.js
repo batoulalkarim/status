@@ -2,16 +2,17 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function ProfileCard({ profile, onDeletePost }){
-    function handleDeletePost(){
+//     function handleDeletePost(){
 
-        fetch(`http://localhost:8002/profiles/${profile.id}`, {
-            method: "DELETE",
-        });
-        onDeletePost(profile.id);
-    }
+//         fetch(`http://localhost:8002/profiles/${profile.id}`, {
+//             method: "DELETE",
+//         });
+//         onDeletePost(profile.id);
+//     }
 
     return(
         <Link to= {`profiles/${profile.id}`}>
+       <div className="homeContainer">    
         <div className="column">
         <div className="cards">
                 <div className="image">
@@ -25,8 +26,9 @@ function ProfileCard({ profile, onDeletePost }){
                     </div>
 
                 </div>
-                <button onSubmit={handleDeletePost}>Delete</button>
+                <button onSubmit={(event) => onDeletePost(event, profile)}>Delete</button>
             </div>
+        </div>
         </div>
         </Link>
     )
