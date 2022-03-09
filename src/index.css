@@ -1,6 +1,7 @@
 * {
   background-color: rgb(247, 217, 222);
   justify-content: center;
+  
 }
 
 body {
@@ -18,29 +19,52 @@ body {
   text-align: left;
   font-size: 50px;
   margin-left: 200px;
+  overflow: hidden;
+  display: block;
+}
+.homeTopBar {
+  display: block;
+  min-width: 1000px;
+  position:fixed;
+  padding-bottom: 30px;
+  padding-right: 50px;
+}
+
+.search {
+  float: right;
+  margin-top: -50px;
+  display: block;
+  width: 250px;
 }
 
 .homeContainer {
   margin-left: 300px;
   margin-right: 200px;;
   float: left;
+  overflow: hidden;
 }
 .navbar {
   background-color: #333;
   overflow: hidden;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 114%;
+  
 }
 
 .navbar a {
   float: left;
   display: flex;
-  color: #f2f2f2;
+  color: #0a0a0a;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  width: 20%;
+  overflow: hidden;
+  padding-right: -30px;
+  background-color: rgb(160, 58, 121);
+  border: solid;
 }
 
 .navbar a:hover {
@@ -57,6 +81,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 140px;
+  margin-bottom: -30px;
 }
 
 .lirating{
@@ -89,12 +115,49 @@ body {
   box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 50px;
   transition: 0.3s;
-  margin: 0 auto;
-  float: center;
+  margin-left: 300px;
+  float: left;
   text-align: center;
   width: 550px;
   height: 600px;
   margin-bottom: 80px;
+}
+.commentsGoHere {
+  border: 1px solid;
+  border-color: gray;
+  float: right;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 5px;
+}
+.commentsContainer {
+  border: solid;
+  border-color: rgb(218, 157, 167);
+  box-shadow: 0 15px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  height: 500px;
+  width: 300px;
+  margin-left: 50px;
+  float: left;
+  bottom: 10px;
+  position: relative;
+}
+
+.commentsForm {
+  text-align: center;
+  display: flex; 
+  
+}
+
+.commentInput {
+  width: 200px;
+}
+
+.formOnBottom{
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 .picCaption {
   text-align: left;
@@ -113,6 +176,7 @@ body {
 
 .commentsFormContainer {
   text-align: center;
+  bottom: 10px;
 }
 
 .profileCard:hover {
@@ -131,14 +195,18 @@ body {
   padding: 50px;
   transition: 0.3s;
   margin: 30px;
+  margin-bottom: 30px;
   float: left;
   text-align: center;
   width: 550px;
   height: 655px;
+  display: block;
+  background-color: rgb(218, 157, 167);
+  
 }
 
 .cards:hover {
-  box-shadow: 0 8px 16px 0 rgba(218, 31, 31, 0.685);
+  box-shadow: 0px 4px 40px 0 rgba(250, 246, 3, 0.685);
 }
 .stars {
   height: 50px;
@@ -217,3 +285,58 @@ a {
 .profile-div * {
   outline: none;
 }
+.tophalfsuggested {
+  float: left;
+  display: flex;
+  margin-right: 15%;
+  margin-left: 50px;
+  position: relative;
+  color: gray;
+}
+
+.suggestedFollow {
+  border: solid;
+  margin-left: 1000px;
+  margin-right: 50;
+  margin-bottom: -480px;
+  margin-top: 190px;
+  padding-bottom: 200px;
+  display: block;
+  position: relative;
+  width: 300px;
+}
+.wrap {
+  min-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  margin-top: -30px;
+  
+}
+
+.suggestedWrap {
+  position:fixed;
+
+}
+
+.smallPic {
+  height: 60px;
+  border-radius: 50%
+}
+
+.thuser {
+  float: right;
+  margin-right: 29%;
+  margin-top: 2px;
+  position: relative;
+  display: flex;
+}
+
+.thuser1 {
+  float: right;
+  margin-right: 27%; 
+  margin-top: -40px;
+  position: relative;
+  display: flex;
+}
+
