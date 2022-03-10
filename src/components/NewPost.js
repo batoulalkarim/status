@@ -58,7 +58,7 @@ function NewPost({ onAddPost, yourAccount }){
       </div>
       <div className="npForm">
         <form className="npbgf" onSubmit={handleSubmit}>
-          <h1 className="npbgf">Are You Ready To Post?</h1>
+          <h1 className="npbgft">Are You Ready To Post?</h1>
          <input className="cap1" name="caption" type="text" placeholder="Write a Caption..." 
           onChange={handleChange} />
         {/* <input name="image" type="file" accept="image/png, image/jpeg, image/jpg" 
@@ -67,6 +67,21 @@ function NewPost({ onAddPost, yourAccount }){
           onChange={handleChange}  />
           <button type="submit" >Post Pic</button>
         </form>
+      </div>
+      <div className="checklist">
+        <h1 id="checklistTITLE">Checklist BEFORE you post..</h1>
+          <ol className="checklistli">
+            <li className="checklistli">Did you wash your face?</li>
+            <li className="checklistli">Are your teeth white?</li>
+            <li className="checklistli">Do you have any acne? if so- use a filter</li>
+            <li className="checklistli">Is your mustache showing girlie?</li>
+            <li className="checklistli">Does your outfit match?</li>
+            <li className="checklistli">Do you feel confident?</li>
+            <li className="checklistli">Did you get rid of fly away hairs?</li>
+            <li className="checklistli">Can anyone rate you less than 5 stars on this post?</li>
+            <li className="checklistli">Are you exuding Boss Girl Energy?</li>
+            <li className="checklistli">Bestie.. are you SURE this is it?</li>
+          </ol>
       </div>
     </div>
   )
