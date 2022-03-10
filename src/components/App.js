@@ -12,7 +12,6 @@ import UserRating from './UserRating';
 
 
 function App() {
-
   const [profileData, setProfileData] = useState([]);
 
   function reloadProfiles() {
@@ -45,9 +44,7 @@ function App() {
           // onDeletePost(profile.id);
           console.log("deleting id")
         }
-    // const updatedProfilesArray = profileData.filter((profile) => profile.id !== id);
-    // setProfileData(updatedProfilesArray)
-
+    
     function handleUpdateComments(updatedComment){
       const updatedProfilesArray = profileData.filter((profile) => {
         if(profile.id === updatedComment.id){
@@ -61,18 +58,25 @@ function App() {
 
   if (!profileData) return <h3>Loading...</h3>;
 
+
+
+
   return (
     <Router>
        <UserRating user={profileData[0]} />
       <Switch>
       <Route exact path='/'>
-        <HomePage onDeletePost={handleDeletePost} profiles={profileData} onUpdateComments={handleUpdateComments}/>
+        <HomePage onDeletePost={handleDeletePost}
+         profiles={profileData} 
+         onUpdateComments={handleUpdateComments}
+       
+         />
       </Route>
       <Route exact path='/rankings'>
         <RankingsPage profiles={profileData}/>
       </Route>
       <Route exact path='/profiles/:id'>
-        <Profile />
+        <Profile  />
       </Route>
       <Route exact path='/new-post'>
         <NewPost

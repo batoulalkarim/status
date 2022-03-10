@@ -2,6 +2,8 @@ import {React, useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import responses from "../data";
 
+
+
 function NewPost({ onAddPost, yourAccount }){
 
   let history = useHistory();
@@ -52,6 +54,7 @@ function NewPost({ onAddPost, yourAccount }){
 
   
   return(
+    <div id="entirePage">
     <div className="newpostContainer">
       <div className="headingNP">
         <h2 className="np">New Post</h2>
@@ -71,6 +74,7 @@ function NewPost({ onAddPost, yourAccount }){
       <div className="checklist">
         <h1 id="checklistTITLE">Checklist BEFORE you post..</h1>
           <ol className="checklistli">
+            <strong>
             <li className="checklistli">Did you wash your face?</li>
             <li className="checklistli">Are your teeth white?</li>
             <li className="checklistli">Do you have any acne? if so- use a filter</li>
@@ -81,8 +85,10 @@ function NewPost({ onAddPost, yourAccount }){
             <li className="checklistli">Can anyone rate you less than 5 stars on this post?</li>
             <li className="checklistli">Are you exuding Boss Girl Energy?</li>
             <li className="checklistli">Bestie.. are you SURE this is it?</li>
+            </strong>
           </ol>
       </div>
+    </div>
     </div>
   )
 }

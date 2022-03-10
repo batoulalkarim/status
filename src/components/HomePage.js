@@ -4,7 +4,7 @@ import ProfileCard from './ProfileCard';
 import star from '../images/star.png';
 
 
-function HomePage({profiles, onDeletePost, onUpdateComments }) {
+function HomePage({profiles, onDeletePost, onUpdateComments}) {
 
   
   return (
@@ -13,7 +13,7 @@ function HomePage({profiles, onDeletePost, onUpdateComments }) {
       {/* this div below is also going to hold the search bar */}
       <div className="homeTopBar">
       <h1 className="status">~Status~</h1>
-      <input type="text" placeholder="Search" className="search" />
+      <input type="search" placeholder="Search" className="search" />
       
         <div className="moveStars">
           <div className='stars'>
