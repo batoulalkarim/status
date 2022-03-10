@@ -2,14 +2,12 @@ import {React, useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import Stars from "./rating/Stars";
 import RatingForm from "./rating/RatingForm";
-import {AiOutlineSmile} from "react-icons/ai"
+import CommentsForm from "./CommentsForm";
 
 function Profile({onUpdateComments}) {
     const [profile, setProfile] = useState(null);
     const [isHidden, setIsHidden] = useState(true)
     const {id} = useParams()
-    const [comment, setComment] = useState("");
-    const [submittedData, setSubmittedData] = useState([]);
 
     function reloadProfile() {
       fetch(`http://localhost:8002/profiles/${id}`)
@@ -21,14 +19,13 @@ function Profile({onUpdateComments}) {
       fetch(`http://localhost:8002/profiles/${id}`)
       .then(r => r.json())
       .then(data => setProfile(data))
-    }, [id])
+    }, [id]);
 
     function changeHidden() {
       setIsHidden(!isHidden);
     }
 
     function handleKeyDown(e) {
-      e.preventDefault();
       if (e.key === 'Escape' && !isHidden) {
         setIsHidden(true);
       }
@@ -36,40 +33,10 @@ function Profile({onUpdateComments}) {
 
   if(!profile) return null;
 
-
-    function handleCommentChange(event){
-      setComment(event.target.value);
-    }
-
-    function handleSubmit(event){
-      event.preventDefault();
-      const commentData = {comment: comment};
-      const commentArray = [...submittedData, commentData];
-      setSubmittedData(commentArray);
-      setComment("");
-      fetch(`http://localhost:8001/profiles/${id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({comments: comment})
-      })
-      .then(res => res.json())
-      .then((updatedComment) => {
-        onUpdateComments(updatedComment)
-      });
-    }
-
-    const listOfComments = submittedData.map((profile, index) => {
-      return(
-        <li key={index}>
-          {profile.comment}
-        </li>
-      )
+    const listOfComments = profile.comments.map(comment =>{
+      return <li key={profile.comments.indexOf(comment)} >{comment}</li>;
     })
     
-
-
 
   return (
     <div tabIndex={0} onKeyDown={(e) => handleKeyDown(e)} className="profile-div">
@@ -82,28 +49,28 @@ function Profile({onUpdateComments}) {
     <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
     <RatingForm isHidden={isHidden} changeHidden={changeHidden} profile={profile} reloadProfile={reloadProfile}/>
     <Stars size={25} rating={profile.rating} />
-    <button onClick={changeHidden}>Rate</button>
+    {
+      profile.id !== 1 ? <button onClick={changeHidden}>Rate</button> : null
+    }
     </div>
     <br />
     <br />
     <div className="commentsContainer">
-        <div className="commentsFormContainer">
-          <div className="commentsGoHere">
+      <div className="commentsFormContainer">
+        <div className="commentsGoHere">
           <h4><u>{profile.username}</u> : {profile.caption}</h4>
-          </div>
-         <ul>
+        </div>
+
+        <ul>
           {listOfComments}
-         </ul>
-         <div className="formOnBottom">
-           <form className="commentsForm" onSubmit={handleSubmit}>
-             <label className="formLabel"><AiOutlineSmile size="25px" /></label>
-             <input type="text" placeholder="Add a Comment..."className="commentInput" value={comment} onChange={handleCommentChange}/>
-             <input type= "submit" value="Post" />
-           </form>
-         </div>
-       </div>
-    </div>
+        </ul>
+
+      <div className="formOnBottom">
+        <CommentsForm profile={profile} reloadProfile={reloadProfile}/>
+      </div>
   </div>
+    </div>
+    </div>
   )
 }
 

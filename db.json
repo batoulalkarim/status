@@ -5,7 +5,7 @@
       "username": "user",
       "name": "Me",
       "bio": "Create a bio",
-      "rating": 3,
+      "rating": 3.5,
       "image": "",
       "caption": "",
       "comments": []
@@ -18,17 +18,24 @@
       "rating": 4.9,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/batoul-profile-pic.png",
       "caption": "What am I even supposed to write here? #SelfieSunday",
-      "comments": []
+      "comments": [
+        "nice",
+        "lookin good",
+        "soooo cute",
+        "awesome"
+      ]
     },
     {
       "id": 3,
       "username": "zelchow",
       "name": "Zelie Chowaiki",
       "bio": "world's greatest poster",
-      "rating": 3.7,
+      "rating": 4.4,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/zelie-profile-pic.png",
       "caption": "I will change this don't worry lol",
-      "comments": []
+      "comments": [
+        "please change the picture"
+      ]
     },
     {
       "id": 4,
@@ -55,7 +62,7 @@
       "username": "stormibaby",
       "name": "Stormi",
       "bio": "My mom made me this account..",
-      "rating": 4,
+      "rating": 2.8,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/7a6fee444c42191d99acb7be0eeb97a9da52cdaf/src/images/stormi-profile-pic.jpeg",
       "caption": "Just another day bathing in billions",
       "comments": []

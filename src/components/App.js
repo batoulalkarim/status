@@ -2,6 +2,7 @@ import '../App.css';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
 import RankingsPage from './RankingsPage';
+import RedemptionPage from './RedemptionPage';
 import Profile from './Profile';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { React, useState, useEffect} from 'react';
@@ -58,9 +59,11 @@ function App() {
       setProfileData(updatedProfilesArray);
     }
 
+  if (!profileData) return <h3>Loading...</h3>;
+
   return (
     <Router>
-       <UserRating />
+       <UserRating user={profileData[0]} />
       <Switch>
       <Route exact path='/'>
         <HomePage onDeletePost={handleDeletePost} profiles={profileData} onUpdateComments={handleUpdateComments}/>
@@ -76,6 +79,9 @@ function App() {
         // onDeletePost={handleDeletePost}  
         onAddPost={reloadProfiles} 
         yourAccount={profileData[0]}/>
+      </Route>
+      <Route exact path='/redemption'>
+        <RedemptionPage />
       </Route>
     </Switch>
     <NavBar />
