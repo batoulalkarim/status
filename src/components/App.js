@@ -60,7 +60,7 @@ function App() {
 
   return (
     <Router>
-       <UserRating />
+       <UserRating user={profileData[0]} />
       <Switch>
       <Route exact path='/'>
         <HomePage onDeletePost={handleDeletePost} profiles={profileData} onUpdateComments={handleUpdateComments}/>
