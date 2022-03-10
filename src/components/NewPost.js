@@ -46,6 +46,8 @@ function NewPost({ onAddPost, yourAccount }){
 
   if(!updatedAccount) return null;
 
+
+  
   return(
     <div className="newpostContainer">
       <div className="headingNP">
@@ -60,7 +62,7 @@ function NewPost({ onAddPost, yourAccount }){
           onChange={handleChange}  /> */}
          <input name="image" type="text" placeholder="add image url"
           onChange={handleChange}  />
-          <button type="submit">Post Pic</button>
+          <button type="submit" >Post Pic</button>
         </form>
       </div>
     </div>
