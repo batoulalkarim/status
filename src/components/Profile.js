@@ -4,7 +4,7 @@ import Stars from "./rating/Stars";
 import RatingForm from "./rating/RatingForm";
 import CommentsForm from "./CommentsForm";
 
-function Profile() {
+function Profile({onUpdateComments}) {
     const [profile, setProfile] = useState(null);
     const [isHidden, setIsHidden] = useState(true)
     const {id} = useParams()
@@ -36,7 +36,7 @@ function Profile() {
     const listOfComments = profile.comments.map(comment =>{
       return <li key={profile.comments.indexOf(comment)} >{comment}</li>;
     })
-
+    
 
   return (
     <div tabIndex={0} onKeyDown={(e) => handleKeyDown(e)} className="profile-div">

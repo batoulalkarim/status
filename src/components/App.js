@@ -7,6 +7,9 @@ import Profile from './Profile';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { React, useState, useEffect} from 'react';
 import NewPost from './NewPost';
+import UserRating from './UserRating';
+
+
 
 function App() {
 
@@ -45,12 +48,25 @@ function App() {
     // const updatedProfilesArray = profileData.filter((profile) => profile.id !== id);
     // setProfileData(updatedProfilesArray)
 
+    function handleUpdateComments(updatedComment){
+      const updatedProfilesArray = profileData.filter((profile) => {
+        if(profile.id === updatedComment.id){
+          return updatedComment;
+        } else {
+          return profile
+        }
+      })
+      setProfileData(updatedProfilesArray);
+    }
+
+  if (!profileData) return <h3>Loading...</h3>;
 
   return (
     <Router>
+       <UserRating user={profileData[0]} />
       <Switch>
-      <Route exact path='/' onChange={reloadProfiles}>
-        <HomePage onDeletePost={handleDeletePost} profiles={profileData}/>
+      <Route exact path='/'>
+        <HomePage onDeletePost={handleDeletePost} profiles={profileData} onUpdateComments={handleUpdateComments}/>
       </Route>
       <Route exact path='/rankings'>
         <RankingsPage profiles={profileData}/>
