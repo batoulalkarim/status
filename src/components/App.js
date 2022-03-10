@@ -2,6 +2,7 @@ import '../App.css';
 import NavBar from './NavBar';
 import HomePage from './HomePage';
 import RankingsPage from './RankingsPage';
+import RedemptionPage from './RedemptionPage';
 import Profile from './Profile';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import { React, useState, useEffect} from 'react';
@@ -62,6 +63,9 @@ function App() {
         // onDeletePost={handleDeletePost}  
         onAddPost={reloadProfiles} 
         yourAccount={profileData[0]}/>
+      </Route>
+      <Route exact path='/redemption'>
+        <RedemptionPage />
       </Route>
     </Switch>
     <NavBar />

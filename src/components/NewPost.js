@@ -1,5 +1,6 @@
 import {React, useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
+import responses from "../data";
 
 function NewPost({ onAddPost, yourAccount }){
 
@@ -16,19 +17,21 @@ function NewPost({ onAddPost, yourAccount }){
       alert('Post must include image and caption');
     }
     else {
-      console.log(updatedAccount);
+      const response = responses[Math.floor(Math.random()*responses.length)];
+      const newRating = Math.min(Math.max((updatedAccount.rating + response.increment), 0), 5);
       fetch('http://localhost:8002/profiles/1',{
         method: 'PATCH',
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(updatedAccount)
+        body: JSON.stringify({...updatedAccount, rating: newRating})
         })
         .then(response => response.json())
         .then(newPost => {
           onAddPost(newPost);
           e.target.reset();
           history.push('/');
+          alert(response.alert);
         });
     }
   }

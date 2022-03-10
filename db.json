@@ -5,9 +5,9 @@
       "username": "user",
       "name": "Me",
       "bio": "Create a bio",
-      "rating": 3,
-      "image": "",
-      "caption": "",
+      "rating": 3.3,
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*",
+      "caption": "cute dog!",
       "comments": []
     },
     {
@@ -18,7 +18,12 @@
       "rating": 5,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/batoul-profile-pic.png",
       "caption": "What am I even supposed to write here? #SelfieSunday",
-      "comments": []
+      "comments": [
+        "nice",
+        "lookin good",
+        "soooo cute",
+        "awesome"
+      ]
     },
     {
       "id": 3,
@@ -55,7 +60,7 @@
       "username": "stormibaby",
       "name": "Stormi",
       "bio": "My mom made me this account..",
-      "rating": 4,
+      "rating": 2.8,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/7a6fee444c42191d99acb7be0eeb97a9da52cdaf/src/images/stormi-profile-pic.jpeg",
       "caption": "Just another day bathing in billions",
       "comments": []
