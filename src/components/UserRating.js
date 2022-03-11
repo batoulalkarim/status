@@ -3,8 +3,7 @@ import Stars from "./rating/Stars";
 
 
 
-function UserRating({user}){
-
+function UserRating({user, isHome}){
     if (!user) return null;
 
     return (

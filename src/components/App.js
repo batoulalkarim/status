@@ -13,6 +13,7 @@ import UserRating from './UserRating';
 
 function App() {
   const [profileData, setProfileData] = useState([]);
+  const [isHome, setIsHome] = useState(true);
 
   function reloadProfiles() {
     fetch('http://localhost:8002/profiles')
@@ -24,9 +25,10 @@ function App() {
     reloadProfiles();
   },[])
 
-  function handleDeletePost(event, profile) {
-    event.stopPropagation();
-    const foundIndex = profileData.findIndex(item => profile.id === item.id);
+  function handleDeletePost(profile, event) {
+    event.stopImmediatePropagation();
+    event.nativeEvent.stopImmediatePropagation();
+   const foundIndex = profileData.findIndex(item => profile.id === item.id);
     if (foundIndex === -1) {
       console.log("secret message")
     } else {
@@ -63,7 +65,7 @@ function App() {
 
   return (
     <Router>
-       <UserRating user={profileData[0]} />
+       <UserRating user={profileData[0]} isHome={isHome}/>
       <Switch>
       <Route exact path='/'>
         <HomePage onDeletePost={handleDeletePost}
