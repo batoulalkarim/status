@@ -80,6 +80,16 @@
       "rating": 5,
       "image": "",
       "comments": []
+    },
+    {
+      "id": 8,
+      "username": "boltTheDog",
+      "name": "Bolt",
+      "bio": "Do you have any treats for me?",
+      "rating": 3,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/dog.jpeg",
+      "caption": "Ive been a bad dog recently :/ I keep chewing my moms shoes, but if they didnt want me to chew them, why did they make them so tasty?? #DogsOfStatus",
+      "comments": []
     }
   ]
 }
