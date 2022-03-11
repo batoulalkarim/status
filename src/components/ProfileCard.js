@@ -18,8 +18,8 @@ function ProfileCard({ profile, onDeletePost}){
                       <Stars size={30} rating={profile.rating} />
                     </div>
                 </div>
-                <button onClick={(event) => 
-                    onDeletePost(event, profile)}>Block</button>
+                {/* <button onClick={(event) => 
+                    onDeletePost(event, profile)}>Block</button> */}
             </div>
             </Link>
         </div>
