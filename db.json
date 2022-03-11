@@ -100,6 +100,16 @@
       "rating": 5,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/lara.jpeg",
       "comments": []
+    },
+    {
+      "id": 11,
+      "username": "artistHalim",
+      "name": "Halim Alkarim ",
+      "bio": "Im an artist from iraq- life is love and love is peace",
+      "caption": "I dont want to sell you my art, thank you though.",
+      "rating": 3.5,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/halim.jpeg",
+      "comments": []
     }
   ]
 }
