@@ -1,8 +1,15 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react';
+import {useLocation} from "react-router-dom";
+import trophy from "../images/trophy.png";
 
-function RankingsPage({profiles}) {
+function RankingsPage({profiles, onPathChange}) {
 
   const [sortBy, setSortBy] = useState('popular');
+  let location = useLocation();
+  
+  useEffect(() => {
+    onPathChange(location.pathname);
+  },[location.pathname, onPathChange]);
 
   function onSortChange(newSort) {
     setSortBy(newSort);
@@ -14,7 +21,7 @@ function RankingsPage({profiles}) {
     <div>
       <h1 className="rankTitle">Rankings</h1>
       <div>
-      <img className="trophy" src="https://www.freeiconspng.com/uploads/elegant-trophy-hd-png-6.png"  alt="elegant trophy hd png" />
+      <img className="trophy" src={trophy}  alt="elegant trophy hd png" />
       </div>
       <div className="moveSortbar" >
       <div id="sort-bar" className="">

@@ -1,13 +1,17 @@
 import {React, useEffect, useState } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import responses from "../data";
 
-
-
-function NewPost({ onAddPost, yourAccount }){
+function NewPost({ onAddPost, yourAccount, onPathChange }){
 
   let history = useHistory();
   const [updatedAccount, setUpdatedAccount] = useState({});
+
+  let location = useLocation();
+  
+  useEffect(() => {
+    onPathChange(location.pathname);
+  },[location.pathname, onPathChange]);
 
   useEffect(() => {
     setUpdatedAccount({...yourAccount, image: '', caption: ''});

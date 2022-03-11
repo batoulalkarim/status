@@ -366,6 +366,18 @@ a {
   height: 10px;
 }
 
+.userWrap2 {
+  border: solid;
+  margin-left: 1050px;
+  margin-right: 20;
+  margin-bottom: 480px;
+  margin-top: 50px;
+  padding-bottom: 100px;
+  display: block;
+  position: absolute;
+  width: 300px;
+  height: 10px;
+}
 
 .smallPic {
   height: 60px;

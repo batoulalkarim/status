@@ -5,7 +5,7 @@
       "username": "user",
       "name": "Me",
       "bio": "Create a bio",
-      "rating": 3,
+      "rating": 3.4,
       "image": "",
       "caption": "",
       "comments": []
@@ -22,7 +22,8 @@
         "nice",
         "lookin good",
         "soooo cute",
-        "awesome"
+        "awesome",
+        "cool"
       ]
     },
     {

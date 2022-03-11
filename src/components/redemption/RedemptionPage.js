@@ -1,4 +1,5 @@
 import {React, useState, useEffect} from 'react';
+import {useLocation} from "react-router-dom";
 import ExpressionCard from './ExpressionCard';
 import timeout from './timeout';
 import laugh from "./expressions/laugh.png";
@@ -6,10 +7,16 @@ import smile from "./expressions/smile.png";
 import flirt from "./expressions/flirt.png";
 import sympathize from "./expressions/sympathize.png";
 
-function RedemptionPage({user, reloadProfiles}) {
+function RedemptionPage({user, reloadProfiles, onPathChange}) {
 
   const expressionList = [smile, laugh, flirt, sympathize];
   const [isOn, setIsOn] = useState(false);
+
+  let location = useLocation();
+  
+  useEffect(() => {
+    onPathChange(location.pathname);
+  },[location.pathname, onPathChange]);
 
   const initPlay = {
     isDisplay: false,

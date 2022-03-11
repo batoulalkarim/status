@@ -1,12 +1,19 @@
 
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import ProfileCard from './ProfileCard';
 import star from '../images/star.png';
+import {useLocation} from "react-router-dom";
 
 
-function HomePage({profiles, onDeletePost, onUpdateComments}) {
+function HomePage({profiles, onDeletePost, onUpdateComments, onPathChange}) {
 
   const [search, setSearch] = useState('')
+
+  let location = useLocation();
+  
+  useEffect(() => {
+    onPathChange(location.pathname);
+  },[location.pathname, onPathChange]);
 
   function handleSearchChange(e) {
     setSearch(e.target.value);

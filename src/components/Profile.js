@@ -1,13 +1,19 @@
 import {React, useState, useEffect} from 'react';
-import {useParams} from "react-router-dom";
+import {useParams, useLocation} from "react-router-dom";
 import Stars from "./rating/Stars";
 import RatingForm from "./rating/RatingForm";
 import CommentsForm from "./CommentsForm";
 
-function Profile({onUpdateComments}) {
+function Profile({onPathChange}) {
     const [profile, setProfile] = useState(null);
     const [isHidden, setIsHidden] = useState(true)
     const {id} = useParams()
+
+    let location = useLocation();
+  
+  useEffect(() => {
+    onPathChange(location.pathname);
+  },[location.pathname, onPathChange]);
 
     function reloadProfile() {
       fetch(`http://localhost:8002/profiles/${id}`)

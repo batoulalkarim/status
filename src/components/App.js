@@ -10,9 +10,9 @@ import NewPost from './NewPost';
 import UserRating from './UserRating';
 
 
-
 function App() {
   const [profileData, setProfileData] = useState([]);
+  const [currentPath, setCurrentPath] = useState('/');
 
   function reloadProfiles() {
     fetch('http://localhost:8002/profiles')
@@ -21,8 +21,9 @@ function App() {
   }
   
   useEffect(() => {
+    console.log(currentPath);
     reloadProfiles();
-  },[])
+  },[currentPath]);
 
   function handleDeletePost(event, profile) {
     event.stopPropagation();
@@ -56,36 +57,38 @@ function App() {
       setProfileData(updatedProfilesArray);
     }
 
+    function onPathChange(newPath) {
+      setCurrentPath(newPath);
+    }
+
   if (!profileData) return <h3>Loading...</h3>;
-
-
-
 
   return (
     <Router>
-       <UserRating user={profileData[0]} />
+       <UserRating user={profileData[0]} pathname={currentPath} />
       <Switch>
       <Route exact path='/'>
         <HomePage onDeletePost={handleDeletePost}
          profiles={profileData} 
          onUpdateComments={handleUpdateComments}
-       
+         onPathChange={onPathChange}
          />
       </Route>
       <Route exact path='/rankings'>
-        <RankingsPage profiles={profileData}/>
+        <RankingsPage profiles={profileData} onPathChange={onPathChange}/>
       </Route>
       <Route exact path='/profiles/:id'>
-        <Profile  />
+        <Profile onPathChange={onPathChange} />
       </Route>
       <Route exact path='/new-post'>
         <NewPost
         // onDeletePost={handleDeletePost}  
         onAddPost={reloadProfiles} 
-        yourAccount={profileData[0]}/>
+        yourAccount={profileData[0]}
+        onPathChange={onPathChange}/>
       </Route>
       <Route exact path='/redemption'>
-        <RedemptionPage user={profileData[0]} reloadProfiles={reloadProfiles}/>
+        <RedemptionPage user={profileData[0]} reloadProfiles={reloadProfiles} onPathChange={onPathChange}/>
       </Route>
     </Switch>
     <NavBar />
