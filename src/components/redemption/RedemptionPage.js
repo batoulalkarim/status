@@ -133,12 +133,16 @@ function RedemptionPage({user, reloadProfiles, onPathChange}) {
           </div>
       {isOn && !play.isDisplay && !play.userPlay && play.score && (
           <div className="lost">
-            <div>Final score: {play.score-1}</div>
+            <div className="finalScore">Final score: {play.score-1}</div>
             <button onClick={closeHandle}>Close</button>
           </div>
       )}
+      <div className="directions">
+        <h1>~ Directions ~</h1>
+        <p>Up your people skills. You need help gaining social status in your society, match the expressions seen on the left to the ones in your expression deck. Get 10 correct in a row and gain an entire star. get five or less and you lose more social status.. so pay attention! Press the 'Play Now' button for your chance to be an elite! Remember, mirroring peoples expressions is how they start to like you, and rate you five stars! </p>
+      </div>
       {!isOn && !play.score && (
-        <button className="center score" onClick={startGame}>play</button>
+        <button className="center score" onClick={startGame}>Play Now</button>
       )}
       {isOn && (play.isDisplay || play.userPlay) && (
         <div className="center score" >{play.score}</div>

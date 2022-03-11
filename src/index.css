@@ -460,6 +460,22 @@ a {
   display:block;
   margin: auto;
   text-align: center;
+  background-color: white;
+}
+
+.finalScore {
+  font-size: 30px;
+  margin-right: 50%;
+}
+
+.directions {
+  border: solid;
+  float: right;
+  width: 300px;
+  margin-top: 200px;
+  position: absolute;
+  margin-left: 1050px;
+  text-align: center;
 }
 
 .flash {
