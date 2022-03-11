@@ -497,11 +497,15 @@ a {
   margin-right: 50%;
 }
 
+svg {
+  background-color: transparent;
+}
+
 .directions {
   border: solid;
   float: right;
   width: 300px;
-  margin-top: 200px;
+  margin-top: 154px;
   position: absolute;
   margin-left: 1050px;
   text-align: center;
