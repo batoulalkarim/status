@@ -79,7 +79,7 @@ function App() {
         <RankingsPage profiles={profileData} onPathChange={onPathChange}/>
       </Route>
       <Route exact path='/profiles/:id'>
-        <Profile onPathChange={onPathChange} />
+        <Profile onPathChange={onPathChange} user={profileData[0]}/>
       </Route>
       <Route exact path='/new-post'>
         <NewPost

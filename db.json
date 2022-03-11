@@ -5,7 +5,7 @@
       "username": "user",
       "name": "Me",
       "bio": "Create a bio",
-      "rating": 5,
+      "rating": 2.2,
       "image": "",
       "caption": "",
       "comments": []
@@ -15,7 +15,7 @@
       "username": "theREALswaglord69",
       "name": "Batoul Alkarim",
       "bio": "here for a good time, not a long time",
-      "rating": 4.9,
+      "rating": 5,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/batoul-profile-pic.png",
       "caption": "What am I even supposed to write here? #SelfieSunday",
       "comments": [

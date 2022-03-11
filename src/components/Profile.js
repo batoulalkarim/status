@@ -4,7 +4,7 @@ import Stars from "./rating/Stars";
 import RatingForm from "./rating/RatingForm";
 import CommentsForm from "./CommentsForm";
 
-function Profile({onPathChange}) {
+function Profile({onPathChange, user}) {
     const [profile, setProfile] = useState(null);
     const [isHidden, setIsHidden] = useState(true)
     const [isRated, setIsRated] = useState(false);
@@ -45,7 +45,7 @@ function Profile({onPathChange}) {
   if(!profile) return null;
 
     const listOfComments = profile.comments.map(comment =>{
-      return <li key={profile.comments.indexOf(comment)} >{comment}</li>;
+      return <p key={profile.comments.indexOf(comment)} >{comment}</p>;
     })
     
 
@@ -58,7 +58,8 @@ function Profile({onPathChange}) {
     <h4>{profile.name}</h4>
     <img src={profile.image} alt="profile" className="ppc"></img>
     <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
-    <RatingForm isHidden={isHidden} changeHidden={changeHidden} profile={profile} reloadProfile={reloadProfile} onRate={onRate}/>
+    <RatingForm isHidden={isHidden} changeHidden={changeHidden} profile={profile} reloadProfile={reloadProfile} 
+    onRate={onRate} userRating={user.rating}/>
     <Stars size={25} rating={profile.rating} />
     {
       ((profile.id !== 1) && (!isRated)) ? <button onClick={changeHidden}>Rate</button> : null
@@ -72,9 +73,9 @@ function Profile({onPathChange}) {
           <h4><u>{profile.username}</u> : {profile.caption}</h4>
         </div>
 
-        <ul>
+        <div className="comments-div">
           {listOfComments}
-        </ul>
+        </div>
 
       <div className="formOnBottom">
         <CommentsForm profile={profile} reloadProfile={reloadProfile}/>
