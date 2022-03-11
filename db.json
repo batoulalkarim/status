@@ -110,6 +110,36 @@
       "rating": 3.5,
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/halim.jpeg",
       "comments": []
+    },
+    {
+      "id": 12,
+      "username": "presidentPutin",
+      "name": "Putin",
+      "bio": "Russian President, bow down or i'll invade your country",
+      "caption": "I'm balding :/",
+      "rating": 0,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/putin.jpeg",
+      "comments": []
+    },
+    {
+      "id": 13,
+      "username": "CAGoverner",
+      "name": "Governer Newsom",
+      "bio": "California is our home, here we will make great change!",
+      "caption": "I may be controversial, but at least I care about my state!",
+      "rating": 2.5,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/newsom.jpg",
+      "comments": []
+    },
+    {
+      "id": 14,
+      "username": "President Biden",
+      "name": "Joe Biden",
+      "bio": "I don't know what Russia's on right now.. but ima do me.",
+      "caption": "Miss you, Brother.",
+      "rating": 4,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/biden.jpeg",
+      "comments": []
     }
   ]
 }
