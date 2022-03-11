@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import emptystar from "../../images/emptystar.png";
 import fullstar from "../../images/fullstar.png";
 
-function RatingForm({isHidden, changeHidden, profile, reloadProfile, onRate}) {
+function RatingForm({isHidden, changeHidden, profile, reloadProfile, onRate, userRating}) {
 
   const [starFullness, setStarFullness] = useState(0);
 
@@ -27,7 +27,7 @@ function RatingForm({isHidden, changeHidden, profile, reloadProfile, onRate}) {
     }
   }
 
-  const updatedRating = Math.round((((profile.rating*2)+starFullness)/3)*10)/10;
+  const updatedRating = Math.round((((profile.rating*(5-userRating))+starFullness)/(6-userRating))*10)/10;
   const updatedProfile = {...profile, rating: updatedRating}
 
   function handleSubmitRate() {

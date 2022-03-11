@@ -1,10 +1,10 @@
 const responses = [
   {
     alert: 'Looking good... thank god for facetune',
-    increment: .3
+    increment: 0.3
   },
   {
-    alert: 'You have spinach in your teeth',
+    alert: "That's.... really something",
     increment: -0.4
   },
   {
@@ -22,6 +22,10 @@ const responses = [
   {
     alert: 'What a try hard... fix your fit before you post again, Im just looking out for you',
     increment: -0.4
+  },
+  {
+    alert: "You're so brave for posting this. We love the confidence!",
+    increment: 0.2
   }
 ];
 
