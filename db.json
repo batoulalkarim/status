@@ -90,6 +90,16 @@
       "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/dog.jpeg",
       "caption": "Ive been a bad dog recently :/ I keep chewing my moms shoes, but if they didnt want me to chew them, why did they make them so tasty?? #DogsOfStatus",
       "comments": []
+    },
+    {
+      "id": 9,
+      "username": "lawyerLara",
+      "name": "Lara Alkarim ",
+      "bio": "Im here to make a difference in the world.. and get rich while doing it!",
+      "caption": "New Goodwin photos just came in! #LadyInCharge",
+      "rating": 5,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/lara.jpeg",
+      "comments": []
     }
   ]
 }
