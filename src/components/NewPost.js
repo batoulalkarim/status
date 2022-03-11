@@ -1,6 +1,7 @@
 import {React, useEffect, useState } from 'react';
 import { useHistory, useLocation } from "react-router-dom";
 import responses from "../data";
+import star from '../images/star.png';
 
 function NewPost({ onAddPost, yourAccount, onPathChange }){
 
@@ -66,6 +67,13 @@ function NewPost({ onAddPost, yourAccount, onPathChange }){
       <div className="npForm">
         <form className="npbgf" onSubmit={handleSubmit}>
           <h1 className="npbgft">Are You Ready To Post?</h1>
+          <div className='stars1'>
+          <img src={star} alt="oh no" className='stars1' />
+          <img src={star} alt="oh no" className='stars1'/>
+          <img src={star} alt="oh no" className='stars1'/>
+          <img src={star} alt="oh no" className='stars1'/>
+          <img src={star} alt="oh no" className='stars1'/>
+        </div>
          <input className="cap1" name="caption" type="text" placeholder="Write a Caption..." 
           onChange={handleChange} />
         {/* <input name="image" type="file" accept="image/png, image/jpeg, image/jpg" 

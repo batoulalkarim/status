@@ -25,9 +25,10 @@ function App() {
     reloadProfiles();
   },[currentPath]);
 
-  function handleDeletePost(event, profile) {
-    event.stopPropagation();
-    const foundIndex = profileData.findIndex(item => profile.id === item.id);
+  function handleDeletePost(profile, event) {
+    event.stopImmediatePropagation();
+    event.nativeEvent.stopImmediatePropagation();
+   const foundIndex = profileData.findIndex(item => profile.id === item.id);
     if (foundIndex === -1) {
       console.log("secret message")
     } else {

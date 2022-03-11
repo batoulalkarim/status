@@ -3,15 +3,6 @@ import { Link } from 'react-router-dom';
 import Stars from "./rating/Stars";
 
 function ProfileCard({ profile, onDeletePost}){
-
-//     function handleDeletePost(){
-
-//         fetch(`http://localhost:8002/profiles/${profile.id}`, {
-//             method: "DELETE",
-//         });
-//         onDeletePost(profile.id);
-//     }
-
     return(
        <div className="homeContainer">    
         <div className="column">
@@ -27,7 +18,8 @@ function ProfileCard({ profile, onDeletePost}){
                       <Stars size={30} rating={profile.rating} />
                     </div>
                 </div>
-                <button onSubmit={(event) => onDeletePost(event, profile)}>Delete</button>
+                <button onClick={(event) => 
+                    onDeletePost(event, profile)}>Block</button>
             </div>
             </Link>
         </div>
