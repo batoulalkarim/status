@@ -12,6 +12,16 @@
     },
     {
       "id": 2,
+      "username": "laciePound",
+      "name": "Lacie Pound",
+      "bio": "All I care about is being kind",
+      "rating": 4.4,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Batoul-day-2/src/images/LaciePound.jpeg",
+      "caption": "Pleased to meet you, I'm Lacie :)",
+      "comments": []
+    },
+    {
+      "id": 3,
       "username": "theREALswaglord69",
       "name": "Batoul Alkarim",
       "bio": "here for a good time, not a long time",
@@ -27,7 +37,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "username": "zelchow",
       "name": "Zelie Chowaiki",
       "bio": "world's greatest poster",
@@ -39,7 +49,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "username": "justinbieber",
       "name": "Justin Bieber",
       "bio": "All praise to the most high up",
@@ -49,7 +59,7 @@
       "comments": []
     },
     {
-      "id": 5,
+      "id": 6,
       "username": "swaglord69",
       "name": "Will Burke",
       "bio": "we live in a society",
@@ -63,7 +73,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "username": "stormibaby",
       "name": "Stormi",
       "bio": "My mom made me this account..",
@@ -73,7 +83,7 @@
       "comments": []
     },
     {
-      "id": 7,
+      "id": 8,
       "username": "bdenney",
       "name": "Brandon Teacher Man",
       "bio": "",
@@ -83,7 +93,7 @@
       "comments": []
     },
     {
-      "id": 8,
+      "id": 9,
       "username": "boltTheDog",
       "name": "Bolt",
       "bio": "Do you have any treats for me?",
@@ -93,7 +103,7 @@
       "comments": []
     },
     {
-      "id": 9,
+      "id": 10,
       "username": "lawyerLara",
       "name": "Lara Alkarim ",
       "bio": "Im here to make a difference in the world.. and get rich while doing it!",
