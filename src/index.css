@@ -397,38 +397,47 @@ a {
   display: flex;
 }
 
-.colors {
+.game-container {
+  position: relative;
+  display:block;
+  margin: auto;
+}
+
+.expressions {
   display: flex;
-}
-
-.colors * {
-  height: 200px;
-  width: 200px;
-}
-
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.black {
+  position: fixed;
+  left: 50%;
+  bottom: 0px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
   background-color: black;
 }
 
-.white {
-  background-color: white;
+.score {
+  position: fixed;
+  left: 50%;
+  bottom: 306px;
+}
+
+.expressions * {
+  height: 200px;
+  width: 200px;
+  background-color: transparent;
+}
+
+.big-expression {
+  /* transform: translate(-50%, -50%); */
+  position: fixed;
 }
 
 .center {
   display:block;
   margin: auto;
+  text-align: center;
 }
 
-.yellow {
-  background-color: yellow;
+.flash {
+  background-color: white;
 }
 
 .ylun {

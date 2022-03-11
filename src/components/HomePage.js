@@ -1,19 +1,33 @@
 
-import React from 'react';
+import {React, useState} from 'react';
 import ProfileCard from './ProfileCard';
 import star from '../images/star.png';
 
 
 function HomePage({profiles, onDeletePost, onUpdateComments}) {
 
-  
+  const [search, setSearch] = useState('')
+
+  function handleSearchChange(e) {
+    setSearch(e.target.value);
+  }
+
+  const filteredProfiles = profiles.filter(profile => {
+    return ((profile.name.toLowerCase().includes(search.toLowerCase())) || (profile.username.toLowerCase().includes(search.toLowerCase())))
+  })
+
   return (
     <div className='wrap'>
       
       {/* this div below is also going to hold the search bar */}
       <div className="homeTopBar">
       <h1 className="status">~Status~</h1>
+<<<<<<< HEAD
       <input type="search" placeholder="Search" className="search" />
+=======
+      <input type="search" placeholder="Search" className="search" 
+      onChange={handleSearchChange} value={search} />
+>>>>>>> Zelie-day-2
       
         <div className="moveStars">
           <div className='stars'>
@@ -53,7 +67,7 @@ function HomePage({profiles, onDeletePost, onUpdateComments}) {
             <h4 className='bf'>Follow</h4>
           </div>
       {
-        profiles.map(profile => {
+        filteredProfiles.map(profile => {
           if (profile.image) {
             return (
             <ProfileCard key={profile.id} profile={profile} onDeletePost={onDeletePost} onUpdateComments={onUpdateComments}/>
