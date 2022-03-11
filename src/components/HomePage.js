@@ -22,6 +22,7 @@ function HomePage({profiles, onDeletePost, onUpdateComments}) {
       {/* this div below is also going to hold the search bar */}
       <div className="homeTopBar">
       <h1 className="status">~Status~</h1>
+      <img className="searchimg" src="https://i0.wp.com/www.thinkafrica.fi/wp-content/uploads/2019/04/search-icon.png?fit=1200%2C1200&ssl=1&w=640" alt="oh no" />
       <input type="search" placeholder="Search" className="search" 
       onChange={handleSearchChange} value={search} />
       

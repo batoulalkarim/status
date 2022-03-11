@@ -44,6 +44,13 @@ body {
   margin-right: 20px;
 }
 
+.searchimg {
+  height: 22px;
+  float: right;
+  margin-top: -45px;
+  margin-right: 275px;
+}
+
 .homeContainer {
   margin-left: 300px;
   margin-right: 200px;;
