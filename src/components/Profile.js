@@ -7,6 +7,7 @@ import CommentsForm from "./CommentsForm";
 function Profile({onPathChange}) {
     const [profile, setProfile] = useState(null);
     const [isHidden, setIsHidden] = useState(true)
+    const [isRated, setIsRated] = useState(false);
     const {id} = useParams()
 
     let location = useLocation();
@@ -37,6 +38,10 @@ function Profile({onPathChange}) {
       }
     }
 
+    function onRate() {
+      setIsRated(true);
+    }
+
   if(!profile) return null;
 
     const listOfComments = profile.comments.map(comment =>{
@@ -53,10 +58,10 @@ function Profile({onPathChange}) {
     <h4>{profile.name}</h4>
     <img src={profile.image} alt="profile" className="ppc"></img>
     <h5 className="picCaption">{profile.username} : {profile.caption}</h5>
-    <RatingForm isHidden={isHidden} changeHidden={changeHidden} profile={profile} reloadProfile={reloadProfile}/>
+    <RatingForm isHidden={isHidden} changeHidden={changeHidden} profile={profile} reloadProfile={reloadProfile} onRate={onRate}/>
     <Stars size={25} rating={profile.rating} />
     {
-      profile.id !== 1 ? <button onClick={changeHidden}>Rate</button> : null
+      ((profile.id !== 1) && (!isRated)) ? <button onClick={changeHidden}>Rate</button> : null
     }
     </div>
     <br />

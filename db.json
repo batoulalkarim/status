@@ -5,7 +5,7 @@
       "username": "user",
       "name": "Me",
       "bio": "Create a bio",
-      "rating": 3.4,
+      "rating": 5,
       "image": "",
       "caption": "",
       "comments": []
@@ -31,11 +31,11 @@
       "username": "zelchow",
       "name": "Zelie Chowaiki",
       "bio": "world's greatest poster",
-      "rating": 4.4,
-      "image": "https://raw.githubusercontent.com/batoulalkarim/status/Zelie-day-2/src/images/zelie-profile-pic.png",
-      "caption": "I will change this don't worry lol",
+      "rating": 4.6,
+      "image": "https://raw.githubusercontent.com/batoulalkarim/status/bb105f257f680c873975ca22f406db6bdd9c0b5b/src/images/zelie-profile-pic.jpg",
+      "caption": "Leaves on the roof. Had to rake it",
       "comments": [
-        "please change the picture"
+        "Batoul Alkarim: doing god's work"
       ]
     },
     {

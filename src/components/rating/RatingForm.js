@@ -2,7 +2,7 @@ import {React, useState} from 'react'
 import emptystar from "../../images/emptystar.png";
 import fullstar from "../../images/fullstar.png";
 
-function RatingForm({isHidden, changeHidden, profile, reloadProfile}) {
+function RatingForm({isHidden, changeHidden, profile, reloadProfile, onRate}) {
 
   const [starFullness, setStarFullness] = useState(0);
 
@@ -42,6 +42,7 @@ function RatingForm({isHidden, changeHidden, profile, reloadProfile}) {
       .then(response => response.json())
       .then(() => {
         changeHidden();
+        onRate();
         reloadProfile();
       })
     }

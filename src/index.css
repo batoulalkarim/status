@@ -31,8 +31,9 @@ body {
   display: block;
   min-width: 1000px;
   position:fixed;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
   padding-right: 50px;
+  margin-top: -25px;
 }
 
 .search {
@@ -255,6 +256,7 @@ a {
 
 .rating-stars {
   text-align: center;
+  margin-top: -10px;
 }
 
 .moveStars {
@@ -358,7 +360,7 @@ a {
   margin-left: 1050px;
   margin-right: 20;
   margin-bottom: 480px;
-  margin-top: 50px;
+  margin-top: 30px;
   padding-bottom: 100px;
   display: block;
   position: fixed;
@@ -425,6 +427,10 @@ a {
   background-color: black;
 }
 
+/* .expressions img:hover {
+  background-color: white;
+} */
+
 .score {
   position: fixed;
   left: 50%;
@@ -435,6 +441,7 @@ a {
   height: 200px;
   width: 200px;
   background-color: transparent;
+  transition: all 0.3s;
 }
 
 .big-expression {
@@ -450,6 +457,7 @@ a {
 
 .flash {
   background-color: white;
+  transition: all 0.3s;
 }
 
 .ylun {
